@@ -2,4 +2,4 @@
 Lib/
 Scripts/
 pyvenv.cfg
-gll_insurance/settings.py
+src/gll_insurance/gll_insurance/settings.py
