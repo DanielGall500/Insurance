@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from django.views.generic.detail import ListView
+from .models import Service
 
-# Create your views here.
+class ServiceView(ListView):
+	model = Service
