@@ -1,5 +1,8 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
+
+
 
 	<head>
 		<title>Gallagher Insurances</title>
@@ -8,15 +11,44 @@
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	    <style>
+	    	.navbar-brand {
+			    position: relative;
+			    width: 500px;
+			    left: 30px;
+			    top: -30px;
+			    background-size: contain;
+			}
+
+			.navbar {
+				background-color: #e3f2fd;
+				height: 130px;
+			}
+
+			.navbar-nav {
+				background-color: #e3f2fd;
+			}
+
+			.active {
+				background-color: #e3f2fd;
+			}
+
+		</style>
 	</head>
 
 
 	<body>
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default py-4">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#">Gallagher Insurances</a>
+					<a class="navbar-brand" href="#">
+						<img src="{% static 'services/GI_logo.png' %}" 
+						class="d-inline-block align-top" alt="">Gallagher Insurances
+					</a>
 				</div>
+
+				
 
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li>
