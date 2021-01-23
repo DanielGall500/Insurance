@@ -16,5 +16,7 @@ def index(request):
 
 def description(request, pk):
 	service = get_object_or_404(Service, pk=pk)
-	context = { 'service' : service }
+	services_list = Service.objects.all()
+	context = { 'service' : service,
+				'services_list' : services_list }
 	return render(request, 'services/description.html', context=context)

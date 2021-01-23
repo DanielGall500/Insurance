@@ -40,6 +40,14 @@
         		padding-top: 10px;
         	}
 
+            .footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                text-align: center;
+                width: 100%;
+            }
+
         </style>
 	</head>
 
@@ -50,18 +58,14 @@
                 <img src="{% static 'services/GI_logo.png' %}" 
                     class="d-inline-block align-top" alt="">
 
-				<a class="navbar-brand" href="#">Gallagher Insurances</a>
+				<a class="navbar-brand" href="{% url 'services:home' %}">Gallagher Insurances</a>
 
 
                 <div class="collapse navbar-collapse" id="collapse">
                     <ul class="navbar-nav ml-auto">
-
-                        <li class="nav-item text-black">
-                            <a class="nav-link text-black font-weight-bold" href='#'>Home</a>
-                        </li>
-
                         <li class="nav-item text-black dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="servicesButtonDropdown" role="button"
+                            <a class="nav-link dropdown-toggle font-weight-bold" id="servicesButtonDropdown" 
+                            role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Services
                             </a>
@@ -94,9 +98,9 @@
         {% block content %}
         {% endblock content %}
 
-        <footer class="py-3 bg-grey">
+        <div class="footer">
             <p class="m-0 text-dark text-center">
             Tom Gallagher Insurance Ltd<br>Gallagher Insurances is regulated by the Central Bank of Ireland</p>
-        </footer>
+        </div>
 	</body>
 </html>
