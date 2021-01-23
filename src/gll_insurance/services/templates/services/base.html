@@ -68,7 +68,8 @@
 
                             <div class="dropdown-menu" aria-labelledby="servicesButtonDropdown">
                                 {% for service in services_list %}
-                                    <a class="dropdown-item" href='#'>{{ service.title }}</a>
+                                    <a class="dropdown-item" href="{% url 'services:description' service.id %}">
+                                {{ service.title }}</a>
                                 {% endfor %}
                             </div>
                         </li>
@@ -88,7 +89,6 @@
                 </div>
 			</div>
 		</nav>
-
 
 
         {% block content %}
