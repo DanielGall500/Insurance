@@ -4,7 +4,13 @@
 {% extends 'services/base.html' %}
 
 {% block content %}
-<h1>{{ service.title }}</h1>
+<div class="jumbotron jumbotron-fluid">
+	<div class="container">
+		<h1 class="display-4">{{ service.title }}</h1>
+		<p class="lead">Our Services</p>
+	</div>
+</div>
+
 <p>{{ service.description }}</p>
 <p>{{ service.call_to_action }}</p>
 {% endblock content %}
