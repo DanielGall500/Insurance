@@ -67,9 +67,9 @@
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="servicesButtonDropdown">
-                                <a class="dropdown-item" href='#'>Action</a>
-                                <a class="dropdown-item" href='#'>Action</a>
-                                <a class="dropdown-item" href='#'>Action</a>
+                                {% for service in services_list %}
+                                    <a class="dropdown-item" href='#'>{{ service.title }}</a>
+                                {% endfor %}
                             </div>
                         </li>
         
