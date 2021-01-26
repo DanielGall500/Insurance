@@ -1,4 +1,5 @@
 {% extends 'services/base.html' %}
+{% load static %}
 
 {% block content %}
 <div class="alert alert-warning">
@@ -6,5 +7,32 @@
     <h4>COVID-19</h4>
     <p>Until further notice full assistance from Gallagher Insurances can be obtained at the following phone numbers
     <br><u><b>083 0106696<br>086 4593061</b></u></p>
+</div>
+
+<div class="jumbotron">
+	<p class="lead">
+		Centrally located in the large historic port town of Dun Laoghaire in south Dublin. Gallagher Insurances provide advice and guidance to help you arrange suitable insurance to protect your business and its assets. We also provide quotations from over 50 insurance products to cover your car and home.
+		<br><br>
+		We offer a range of insurance, risk management products and services for all types of commercial businesses and private individuals alike.
+		<br><br>
+		Gallagher Insurances are members of Brokers Ireland. We are regulated by the Central Bank of Ireland. and are registered to undertake insurance mediation under the European Communities (Insurance Mediation) Regulations 2005.
+	</p>
+
+	<hr class="my-4">
+
+	<p class="lead">Newmarket House<br>Patrick Street<br>Dun Laoghaire<br>Co. Dublin</p>
+</div>
+
+<div class="card-deck">
+	{% for service in services_list %}
+		<div class="card">
+			<img class="card-img-top" src="{% static 'services/GI_logo.png' %}" alt="card image cap">
+			<div class="card-body">
+				<h5 class="card-title">{{ service.title }}</h5>
+			</div>
+
+			<a href="#" class="btn btn-primary">Learn More</a>
+		</div>
+	{% endfor %}
 </div>
 {% endblock content %}
