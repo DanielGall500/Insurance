@@ -2,11 +2,16 @@
 {% load static %}
 
 {% block content %}
+
 <div class="alert alert-warning">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
     <h4>COVID-19</h4>
     <p>Until further notice full assistance from Gallagher Insurances can be obtained at the following phone numbers
     <br><u><b>083 0106696<br>086 4593061</b></u></p>
+</div>
+
+<div class="container-fluid align-items-center">
+	<img class="img-rounded w-100" src="{% static 'services/dl_stock.jpg' %}">
 </div>
 
 <div class="jumbotron">
@@ -23,16 +28,5 @@
 	<p class="lead">Newmarket House<br>Patrick Street<br>Dun Laoghaire<br>Co. Dublin</p>
 </div>
 
-<div class="card-deck">
-	{% for service in services_list %}
-		<div class="card">
-			<img class="card-img-top" src="{% static 'services/GI_logo.png' %}" alt="card image cap">
-			<div class="card-body">
-				<h5 class="card-title">{{ service.title }}</h5>
-			</div>
-
-			<a href="#" class="btn btn-primary">Learn More</a>
-		</div>
-	{% endfor %}
-</div>
 {% endblock content %}
+
