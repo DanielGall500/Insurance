@@ -28,5 +28,20 @@
 	<p class="lead">Newmarket House<br>Patrick Street<br>Dun Laoghaire<br>Co. Dublin</p>
 </div>
 
+{% for service in services_list %}
+    {% if forloop.first %}<div class="row">{% endif %}
+    <div class="col-xl-4 mx-auto">
+            <div class="card mx-auto" style="width:18rem;">
+              <img class="card-img-top" src="https://www.traversinsurances.ie/wp-content/uploads/2017/05/Van-Insurance.jpg" alt="Card image">
+              <div class="card-body">
+                <h4 class="card-title">{{service.title}}</h4>
+                <a class="btn btn-primary" href="{% url 'services:description' service.id %}">Learn More</a>
+              </div>
+            </div>
+        </div>
+    {% if forloop.counter|divisibleby:3 %}</div><div class="row">{% endif %}
+    {% if forloop.last %}</div>{% endif %}
+{% endfor %}
+
 {% endblock content %}
 
