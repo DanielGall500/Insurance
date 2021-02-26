@@ -4,6 +4,8 @@ class Service(models.Model):
 	title = models.CharField(max_length=100)
 	description = models.TextField()
 	call_to_action = models.TextField()
+	card_image = models.CharField(max_length=100, 
+		default='services/GI_logo_extended.png')
 
 	def __str__(self):
 		return self.title

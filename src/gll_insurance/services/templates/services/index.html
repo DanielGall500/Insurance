@@ -32,7 +32,7 @@
     {% if forloop.first %}<div class="row">{% endif %}
     <div class="col-xl-4 mx-auto">
             <div class="card mx-auto" style="width:18rem;">
-              <img class="card-img-top" src="https://www.traversinsurances.ie/wp-content/uploads/2017/05/Van-Insurance.jpg" alt="Card image">
+              <img class="card-img-top" src="{% static '{{ service.card_image }}' %}" alt="card_image">
               <div class="card-body">
                 <h4 class="card-title">{{service.title}}</h4>
                 <a class="btn btn-primary" href="{% url 'services:description' service.id %}">Learn More</a>
